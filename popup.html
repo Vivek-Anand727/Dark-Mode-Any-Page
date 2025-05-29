@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dark Mode Any Page</title>
+  <style>
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 20px 25px;
+      width: 280px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #ffffff, #000000, #0047ab);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      user-select: none;
+      opacity: 0;
+      animation: fadeIn 0.7s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.6);
+    }
+
+    .palette {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .color-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      cursor: pointer;     
+
+      border: 3px solid transparent;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .color-box:hover {
+      transform: scale(1.15);
+      border-color: #fff;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.8);
+    }
+
+    .custom-color {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 25px;
+      max-width: 100%;
+    }
+
+    label {
+      font-weight: 600;
+      text-shadow: 0 0 4px rgba(0,0,0,0.5);
+    }
+
+    input[type="color"] {
+      width: 100%;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 0;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+
+    input[type="color"]:hover {
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    .reset-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid white;
+      padding: 12px;
+      color: white;
+      font-weight: 700;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.4s ease, transform 0.3s ease;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      user-select: none;
+    }
+
+    .reset-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+    input[type="color"]::-webkit-color-swatch {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Select Background Color:</h2>
+
+  <div class="palette">
+    <div class="color-box" style="background-color: #000000;" data-color="#000000" title="Black"></div>
+    <div class="color-box" style="background-color: #1c1c1c;" data-color="#1c1c1c" title="Dark Gray"></div>
+    <div class="color-box" style="background-color: #2f2f4f;" data-color="#2f2f4f" title="Dark Blue"></div>
+    <div class="color-box" style="background-color: #0b3d0b;" data-color="#0b3d0b" title="Dark Green"></div>
+  </div>
+
+  <div class="custom-color">
+    <label for="customColor">Or pick your own:</label>
+    <input type="color" id="customColor" />
+  </div>
+
+  <button class="reset-btn" id="resetBtn">Reset to Default</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

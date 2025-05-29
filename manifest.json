@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Dark Mode Any Page",
+    "version": "1.0.0",
+  
+    "icons": {
+      "32": "text-bg-color-32.png"
+    },
+  
+    "action": {
+      "default_popup": "popup.html"
+    },
+  
+    "permissions": [
+      "scripting",
+      "storage"
+    ],
+  
+    "host_permissions": [
+      "<all_urls>"
+    ]
+  }
+  
