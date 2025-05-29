@@ -25,13 +25,13 @@ Hello, This is Vivek! Vivek doesn't like light mode themed pages. That's why I c
 ## Screenshots
 
 1. **Original Website (Light Mode)**  
-   ![Original website with white background](screenshots/website-light.png)
+   ![Original website with white background](WITH_EXTENSION.png)
 
 2. **After Applying Dark Mode Extension**  
-   ![Same website with dark background applied by extension](screenshots/website-dark.png)
+   ![Same website with dark background applied by extension](WITHOUT_EXTENSION.png)
 
 3. **Custom Color Picker in Action**  
-   ![Popup showing the palette and custom color picker](screenshots/custom-color-picker.png)
+   ![Popup showing the palette and custom color picker](Custom_Color.png)
 
 ---
 
